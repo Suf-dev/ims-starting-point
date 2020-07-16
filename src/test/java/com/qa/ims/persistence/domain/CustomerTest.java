@@ -16,8 +16,8 @@ public class CustomerTest {
 	
 	@Before
 	public void setUp() {
-		customer = new Customer(1L, "Chris", "Perrins");
-		other = new Customer(1L, "Chris", "Perrins");
+		customer = new Customer(1L, "Chris", "Perrins", "34, hollins avenue", "chris@tim.com", "07498652316");
+		other = new Customer(1L, "Chris", "Perrins", "34, hollins avenue", "chris@tim.com", "07498652316");
 	}
 	
 	@Test
@@ -25,14 +25,27 @@ public class CustomerTest {
 		assertNotNull(customer.getId());
 		assertNotNull(customer.getFirstName());
 		assertNotNull(customer.getSurname());
+		assertNotNull(customer.getAddress());
+		assertNotNull(customer.getEmail());
+		assertNotNull(customer.getMobile());
 		
 		customer.setId(null);
 		assertNull(customer.getId());
+		
 		customer.setFirstName(null);
 		assertNull(customer.getFirstName());
+		
 		customer.setSurname(null);
 		assertNull(customer.getSurname());
 		
+		customer.setAddress(null);
+		assertNull(customer.getAddress());
+		
+		customer.setEmail(null);
+		assertNull(customer.getEmail());
+		
+		customer.setMobile(null);
+		assertNull(customer.getMobile());
 	}
 	
 	@Test
@@ -121,7 +134,7 @@ public class CustomerTest {
 	
 	@Test
 	public void constructorWithoutId() {
-		Customer customer = new Customer("Chris", "Perrins");
+		Customer customer = new Customer(null, "Chris", "Perrins", null, null, null);
 		assertNull(customer.getId());
 		assertNotNull(customer.getFirstName());
 		assertNotNull(customer.getSurname());
