@@ -16,8 +16,8 @@ public class CustomerTest {
 	
 	@Before
 	public void setUp() {
-		customer = new Customer(1L, "Chris", "Perrins", "34, hollins avenue", "chris@tim.com", "07498652316");
-		other = new Customer(1L, "Chris", "Perrins", "34, hollins avenue", "chris@tim.com", "07498652316");
+		customer = new Customer(1L, "Chris", "Perrins", "34 hollins avenue", "chris@tim.com", "07498652316");
+		other = new Customer(1L, "Chris", "Perrins", "34 hollins avenue", "chris@tim.com", "07498652316");
 	}
 	
 	@Test
@@ -63,6 +63,9 @@ public class CustomerTest {
 		assertEquals(1L, customer.getId(), 0);
 		assertEquals("Chris", customer.getFirstName());
 		assertEquals("Perrins", customer.getSurname());
+		assertEquals("34 oasis lane", customer.getAddress());
+		assertEquals("chris@outlook.com", customer.getEmail());
+		assertEquals("07888945412", customer.getMobile());
 	}
 	
 	@Test
@@ -134,7 +137,7 @@ public class CustomerTest {
 	
 	@Test
 	public void constructorWithoutId() {
-		Customer customer = new Customer(null, "Chris", "Perrins", null, null, null);
+		Customer customer = new Customer(null, "Chris", "Perrins", "98 connor row", "cd@qa.com", "07645198234");
 		assertNull(customer.getId());
 		assertNotNull(customer.getFirstName());
 		assertNotNull(customer.getSurname());
@@ -146,14 +149,17 @@ public class CustomerTest {
 	}
 	@Test
 	public void hashCodeTestWithNull() {
-		Customer customer = new Customer(null, null);
-		Customer other = new Customer(null, null);
+		Customer customer = new Customer(1L, "chris", "perrins", "35 wolf street", "cp@q.com", "07998989862");
+		Customer other = new Customer(1L, "bob", "mac", "456 monday street", "bm@q.com", "07165987456");
 		assertEquals(customer.hashCode(), other.hashCode());
 	}
 	
 	@Test
 	public void toStringTest() {
-		String toString = "id:1 first name:Chris surname:Perrins";
+		String toString = "id:1 first name:Chris  surname:Perrins  address:34 hollins avenue  email:chris@tim.com  mobile:07498652316";
 		assertEquals(toString, customer.toString());
 	}
+	
 }
+
+
