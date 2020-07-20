@@ -1,70 +1,41 @@
 Coverage: 34%
 # Project Title
 
-One Paragraph of project description goes here
+This project is based on an inventory management system which allows the user to interact with a MySql database performing CRUD operations thereafter testing the application using JUnit test cases.
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
+#
+A laptop with bare minimum of 8gb RAM would be sufficient and preferably upto date. As for software, Java 8 or later should be installed along with a suitable IDE, for my peronal development for example I have chosen to use the eclipse IDE.
 
-What things you need to install the software and how to install them
 
-```
-Give examples
-```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+The ims folder can be found on Github the following steps should be followed:
+1. fork/clone this repository into a folder on your PC
+2. import the project into a workspace in IDE of your choice
+3. you can then open the ims project and start running 
+4. connection to the specific GCP instance is also required in order to run the project
+5. The next step would be to create a GCP instance to view background activity on the database
 
-Say what the step will be
 
-```
-Give the example
-```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Explain how to run the automated tests for this system. Break down into which tests and what they do
+To test my application I have been focused on Unit and integration testing by using the JUnit framework for testing the each unit of code
 
-### Unit Tests 
 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
-
-### Integration Tests 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
 
 ### And coding style tests
 
-Explain what these tests test and why
+For the focus of my project I have been focused on using a specific design pattern known as the 'Single responsibilty' design pattern which means a class is only responsible for implementing one set function, the reason for this would be to simply code and cause less confusion to the reader.
 
-```
-Give an example
-```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
 
@@ -85,7 +56,5 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat-tip to anyone whose code was used
-* Shout-out to anyone who helped you out
-* Inspiration
-* etc.
+* Thanks to Vinesh, Alan and Nick for all the help 
+
